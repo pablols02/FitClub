@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitClub</title>
+    <link rel="icon" type="image/x-icon" href="/inicio/imagenes/favicon1.png">
+    <link rel="stylesheet" href="/login/login.css">
+    <link href='https://fonts.googleapis.com/css?family=Kanit' rel='stylesheet'>
+</head>
+
+<body>
+<header class="top-header">
+</header>
+
+	<img src="/inicio/imagenes/logo.png" alt="Logo" class="logo">
+    <div class="container" id="container">
+    <div class="form-container sign-up-container">
+        <form th:action="@{/registro}" method="post">
+            <h1>Crear cuenta</h1>
+            <div class="inputBx">
+                <input type="text" name="idUsuario" required>
+                <i>ID Usuario</i>
+            </div>
+            <div class="inputBx">
+                <input type="password" name="passwd" required>
+                <i>Contraseña</i>
+            </div>
+            <div class="inputBx">
+                <input type="text" name="nombre" required>
+                <i>Nombre</i>
+            </div>
+            <div class="inputBx">
+                <input type="text" name="apellidos" required>
+                <i>Apellidos</i>
+            </div>
+            <div class="inputBx">
+                <input type="text" name="dni" required>
+                <i>DNI</i>
+            </div>
+            <div class="inputBx">
+                <input type="text" name="email" required>
+                <i>Email</i>
+            </div>
+            <button>Registrarse</button>
+        </form>
+    </div>
+    <div class="form-container sign-in-container">
+        <form th:action="@{/inicio}" method="post">
+            <h1>Iniciar sesión</h1>
+            <div class="inputBx">
+                <input type="text" name="idUsuario" required>
+                <i>ID Usuario</i>
+            </div>
+            <div class="inputBx">
+                <input type="password" name="passwd" required>
+                <i>Contraseña</i>
+            </div>
+            <button type="submit">Iniciar sesión</button>
+        </form>
+    </div>
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel overlay-left">
+                <h1>¡Bienvenido de nuevo!</h1>
+                <p>Haz clic en el botón para iniciar tu sesión y empieza a entrenar</p>
+                <button class="ghost" id="signIn">Iniciar sesión</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+                <h1>¿Aun no estas registrado?</h1>
+                <p>Haz clic en el botón para crear una cuenta nueva</p>
+                <button class="ghost" id="signUp">Crear cuenta</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <br>
+    <p th:text="${mensaje}" style="color: white; font-size: 16px;"></p>
+
+    <script src="/login/login.js"></script>
+</body>
+
+</html>

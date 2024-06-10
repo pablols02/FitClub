@@ -1,0 +1,369 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #111317;
+  --primary-color-light: #1f2125;
+  --primary-color-extra-light: #35373b;
+  --secondary-color: #f9ac54;
+  --secondary-color-dark: #d79447;
+  --text-light: #d1d5db;
+  --white: #ffffff;
+  --max-width: 1200px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ----------------- Estilo para el contenedor del dropdown ----------------- */
+.dropdown-menu {
+  background-color: var(--primary-color-light);
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100% !important;
+}
+
+/* Estilo para los elementos del dropdown */
+.dropdown-item {
+  color: var(--text-light);
+  padding: 1rem 1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilo cuando se pasa el mouse sobre un elemento del dropdown */
+.dropdown-item:hover {
+  background-color: var(--secondary-color);
+  color: var(--white);
+}
+
+/* Estilo para el botón del dropdown */
+.nav-link.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  color: var(--white);
+  background-color: var(--primary-color-light);
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  position: relative; /* Necesario para el posicionamiento absoluto del dropdown */
+}
+
+/* Estilo cuando se pasa el mouse sobre el botón del dropdown */
+.nav-link.dropdown-toggle:hover {
+  background-color: var(--secondary-color-dark);
+  color: var(--white);
+}
+
+/* Estilo para el icono y el texto en el botón del dropdown */
+.iconoUser {
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+}
+
+#identificador {
+  color: var(--white);
+  font-size: 1.1rem;
+}
+
+/* ----------------- Fin estilo para el contenedor del dropdown ----------------- */
+/* Contenedor de clases con tamaño fijo */
+.classes-container {
+  background-color: var(--primary-color-light);
+  padding: 1.5rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  max-width: 850px;
+  margin: auto;
+  max-height: 600px;
+  min-height: 600px; /* Tamaño fijo */
+  overflow-y: auto;  /* Añadir scroll si el contenido es mayor al tamaño fijo */
+}
+
+/* Estilo para la lista de clases */
+.classes-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Estilo para cada elemento de la lista */
+.class-item {
+  background-color: var(--primary-color-extra-light);
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--white);
+}
+
+/* Estilo para los detalles de la clase */
+.class-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.class-name {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.class-date,
+.class-duration,
+.class-room {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+/* Estilo para la barra de desplazamiento del contenedor de clases */
+.classes-container::-webkit-scrollbar {
+  width: 12px;
+}
+
+.classes-container::-webkit-scrollbar-track {
+  background: var(--primary-color-extra-light);
+  border-radius: 5px;
+}
+
+.classes-container::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  border: 3px solid var(--primary-color-extra-light);
+}
+
+.classes-container::-webkit-scrollbar-thumb:hover {
+  background-color: var(--secondary-color-dark);
+}
+
+.empty-classes-message {
+  color: var(--text-light);
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 12rem; /* Ajusta este valor según sea necesario */
+}
+
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 3rem 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--primary-color);
+}
+
+nav {
+  background-color: #1f2125 !important;
+  box-shadow: 0px 0px 10px #f9ac54;
+}
+
+.navbar{
+	padding: 1.5rem 2rem !important;
+}
+
+.nav__logo {
+  max-width: 150px;
+}
+
+/* Centrando el div con id navbarNav */
+.navbarNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  gap: 2rem;
+  color: white;
+}
+
+.navbar-nav a {
+  position: relative;
+  padding-bottom: 0.75rem;
+  color: white !important;
+  cursor: pointer;
+}
+
+.navbar-nav a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0;
+  left: 0;
+  bottom: 0;
+  background-color: var(--secondary-color);
+  transition: 0.3s;
+}
+
+.navbar-nav a:hover::after {
+  width: 46%;
+}
+
+.explore__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.section__header {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.section__header2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.btnCrear {
+  padding: 1rem 2rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--white);
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btnCrear:hover {
+  background-color: var(--secondary-color-dark);
+}
+
+/* Estilos para el formulario */
+form {
+  background-color: var(--primary-color-light);
+  padding: 1.5rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  max-width: 850px;
+  margin: auto;
+  max-height: 600px;
+  min-height: 600px;
+}
+
+form label {
+  color: var(--text-light);
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid var(--primary-color-extra-light);
+  border-radius: 5px;
+  background-color: var(--primary-color-extra-light);
+  color: var(--white);
+}
+
+form input:focus,
+form select:focus {
+  border-color: var(--secondary-color);
+  outline: none;
+}
+
+form .btnCrear {
+  padding: 0.75rem;
+  margin-top: 1rem;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+
+@media (width < 900px) {
+  .nav__links {
+    display: none;
+  }
+
+  .header__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .header__image {
+    grid-area: 1/1/2/2;
+  }
+
+  .explore__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .class__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .class__image {
+    min-height: 500px;
+  }
+
+  .price__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .review__container {
+    gap: 2rem;
+  }
+
+  .footer__container {
+    grid-template-columns: 1fr 200px;
+  }
+}
+
+@media (width < 600px) {
+  .explore__header {
+    flex-direction: column;
+  }
+
+  .explore__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .sobreNosotros__container {
+    margin-bottom: 15rem;
+  }
+
+  .sobreNosotros__grid {
+    width: 100%;
+    margin: 0;
+    bottom: -20rem;
+  }
+
+  .price__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .review__container {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .review__footer {
+    flex-direction: column;
+  }
+
+  .footer__container {
+    grid-template-columns: 1fr 150px;
+  }
+
+  .footer__bar {
+    text-align: center;
+  }
+}
